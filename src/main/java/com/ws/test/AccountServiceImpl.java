@@ -1,5 +1,7 @@
 package com.ws.test;
 
+import javax.jws.WebService;
+
 import com.ws.test.domain.Account;
 
 public class AccountServiceImpl implements AccountService {
