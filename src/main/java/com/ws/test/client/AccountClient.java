@@ -2,6 +2,8 @@ package com.ws.test.client;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.remoting.jaxws.JaxWsPortProxyFactoryBean;
 
@@ -22,6 +24,9 @@ public class AccountClient {
 		factoryBean.setNamespaceUri("http://test.ws.com/");
 		factoryBean.setServiceName("AccountService");
 		factoryBean.setPortName("AccountServiceEndpointPort");
+		//Map<String, Object> customProperties = new HashMap<String, Object>();
+		//customProperties.put(key, value)
+		//factoryBean.setCustomProperties(customProperties);
 		
 		factoryBean.afterPropertiesSet();
 		AccountService accountService = (AccountService)factoryBean.getObject();
